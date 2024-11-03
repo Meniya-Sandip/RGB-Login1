@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 22vh;
+    background-color: #23242a;
+}
+
+.box{
+    height: 420px;
+    width: 380px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.box2{
+    height: 420px;
+    width: 380px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    height: 420px;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    height: 420px;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.box2::before{
+    content: '';
+    position: absolute;
+    height: 420px;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(0deg,transparent,transparent,#f21492,#f21492,#f21492,#f21492);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.box2::after{
+    content: '';
+    position: absolute;
+    height: 420px;
+    width: 380px;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(0deg,transparent,transparent,#f21492,#f21492,#f21492,#f21492);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.box form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #222;
+    padding: 35px 40px 37px 50px;
+    border-radius: 8px;
+    inset: 5px;
+    z-index: 2;
+}
+
+.box form h2{
+    color: white;
+    text-align: center;
+}
+
+.box form .inputbox{
+    width: 270px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.box form .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 30px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    border: none;
+    margin: 10px 10px -10px;
+}
+
+.box form .inputbox span{
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: #8f8f8f;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.box form .inputbox input:hover ~ span,
+.box form .inputbox input:valid ~ span
+{
+    color: white;
+    font-size: 0.75em;
+    transform: translateY(-30px);
+}
+
+.box form .inputbox i{
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.box form .inputbox input:valid ~ i,
+.box form .inputbox input:hover ~ i{
+    height: 45px;
+    width: 100%;
+    /* background: transparent ; */
+    transform: translateY(-50px);
+}
+
+.box form .link1{
+    display: flex;
+    align-items:start;
+    justify-content: center;
+    font-style: none;
+}
+
+.box form .link2{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.box form .linkss{
+    width: 85%;
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.box form .linkss a{
+    color: rgb(139, 157, 154);
+    text-decoration: none;
+}
+
+.box form .linkss a:hover{
+    color: rgb(143, 234, 232);
+    transition: 0.6s;
+}
+
+.box form input[type="submit"]
+{
+    background-color: #066571;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 100px;
+    border-radius: 7px;
+    color: white;
+}
+
+.box form input[type="submit"]:hover{
+    background-color: rgb(71, 161, 68);
+    color: white;
+    transition: 0.3s;
+}
