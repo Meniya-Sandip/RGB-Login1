@@ -8,7 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 22vh;
+    margin-top: 25vh;
     background-color: #23242a;
 }
 
@@ -22,27 +22,15 @@ body{
 
 }
 
-.box2{
-    height: 420px;
-    width: 380px;
-    background-color: #1c1c1c;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-
-}
-
 .box::before{
     content: '';
     position: absolute;
-    height: 420px;
-    width: 380px;
+    height: 1000px;
+    width: 1000px;
     top: -50%;
     left: -50%;
-    transform-origin: bottom right;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff);
+    transform: translateX(-50%),translateY(-50%);
+    background: linear-gradient(0deg,transparent,transparent,#f11010,#44ff00,#ff00fb,#00fbff);
     z-index: 1;
     animation: animate 6s linear infinite;
 }
@@ -50,49 +38,15 @@ body{
 .box::after{
     content: '';
     position: absolute;
-    height: 420px;
-    width: 380px;
+    height: 1000px;
+    width: 1000px;
     top: -50%;
     left: -50%;
-    transform-origin: bottom right;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff);
+    transform: translateX(-50%),translateY(-50%);
+    background: linear-gradient(0deg,transparent,transparent,#f11010,#44ff00,#ff00fb,#00fbff);
     z-index: 1;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
-}
-
-.box2::before{
-    content: '';
-    position: absolute;
-    height: 420px;
-    width: 380px;
-    top: -50%;
-    left: -50%;
-    transform-origin: bottom right;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(0deg,transparent,transparent,#f21492,#f21492,#f21492,#f21492);
-    z-index: 1;
-    animation: animate 6s linear infinite;
-    animation-delay: -1.5s;
-}
-
-.box2::after{
-    content: '';
-    position: absolute;
-    height: 420px;
-    width: 380px;
-    top: -50%;
-    left: -50%;
-    transform-origin: bottom right;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(0deg,transparent,transparent,#f21492,#f21492,#f21492,#f21492);
-    z-index: 1;
-    animation: animate 6s linear infinite;
-    animation-delay: -4.5s;
 }
 
 @keyframes animate {
